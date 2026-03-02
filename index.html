@@ -1,8 +1,671 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>DigitusTech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digitus Tech | Web Development, Branding & AI Automation for Small Businesses</title>
+<!-- SEO META TAGS -->
+<meta name="description" content="Digitus Tech helps small businesses grow with websites, branding, AI automation, social media management, and high-converting content.">
+
+<meta name="keywords" content="web development Nigeria, small business website, branding services, AI automation, social media management, graphic design, copywriting services">
+
+<meta name="author" content="Digitus Tech">
+
+<!-- Open Graph (Social Media Preview) -->
+<meta property="og:title" content="Digitus Tech - Digital Solutions Agency">
+<meta property="og:description" content="Websites, Branding, AI Automation & Digital Growth Solutions for Small Businesses.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="https://yourusername.github.io/digitus-tech">
+<meta name="robots" content="index,follow">
+
+<!-- Mobile Theme Color -->
+<meta name="theme-color" content="#0b0f1a">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0f1a;
+color:white;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#0b0f1a;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #00c3ff;
+}
+
+.logo img{
+  height: 40px;
+  width="auto"
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a:hover{
+color:#00c3ff;
+}
+
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#0b0f1a,#111a2e);
+}
+
+.hero h1{
+font-size:42px;
+max-width:800px;
+}
+
+.hero span{
+color:#00c3ff;
+}
+
+.hero p{
+margin-top:15px;
+max-width:600px;
+opacity:.8;
+}
+
+.btn{
+margin-top:25px;
+padding:14px 28px;
+background:#00c3ff;
+border:none;
+border-radius:30px;
+color:black;
+font-weight:600;
+cursor:pointer;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* SERVICES */
+
+.section{
+padding:70px 8%;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111a2e;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+max-width:800px;
+margin:auto;
+opacity:.9;
+}
+
+/* CONTACT */
+
+.contact form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+margin:auto;
+}
+
+input, textarea{
+padding:12px;
+border-radius:8px;
+border:none;
+outline:none;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#070b14;
+margin-top:50px;
+opacity:.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:28px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* PROJECT MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #111a2e;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.close {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Minimal gallery inside project modal */
+.gallery {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.gallery .active {
+  display: block;
+}
+
+</style>
 </head>
 <body>
-<h1>Welcome to DigitusTech</h1>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo"><img src="https://i.postimg.cc/Fs7sVYM9/AZy-NIn-Ql-Ta-M9Ybt-S4h-S38w-AZy-NIn-Ql-Nrhn8QQg-Ezrr-Ww.png" alt="Digitus Tech Logo"><span>Digitus Tech</span></div>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">portfolio</a></li>
+<a href="blog/index.html">CMA Blog</a>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Building <span>Digital Solutions</span> That Grow Your Business</h1>
+<p>Web development, branding, AI automation, and high-converting content designed for modern businesses.</p>
+<button class="btn" onclick="scrollToContact()">Get Started</button>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80">
+<h3>Web Development</h3>
+<p>Landing pages, business websites, and blogs built for performance and conversions.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
+<h3>Graphics Design</h3>
+<p>Modern visuals, brand identity, flyers, and professional digital designs.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80">
+<h3>Social Media & Branding</h3>
+<p>Complete brand strategy and social media management that grows engagement.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80">
+<h3>AI Automation</h3>
+<p>Smart workflows and AI solutions that save time and scale your business.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80">
+<h3>Copywriting & Script Writing</h3>
+<p>Persuasive content designed to attract customers and increase sales.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+  <h2>Our Work</h2>
+  
+  <div class="services">
+    
+    <div class="card">
+      <img src="https://i.postimg.cc/yN3xPk27/AZy-Xbi-DM4Ilg2NBXZ8Pdw-Q-AZy-Xbi-DM2p-Cy-Ul-YNt89e-MA.jpg">
+      <h3>Business Website Demo</h3>
+      <p>Responsive business website built to help small businesses attract customers and build credibility online.</p>
+      <button class="btn" onclick="openProject(
+'Business Website Demo',
+'https://i.postimg.cc/yN3xPk27/AZy-Xbi-DM4Ilg2NBXZ8Pdw-Q-AZy-Xbi-DM2p-Cy-Ul-YNt89e-MA.jpg'
+)">View Project</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://i.postimg.cc/dQ4WFpZc/53d1a444-f5c4-4e9e-b9cd-4c055e619083.jpg">
+      <h3>Brand Identity Design</h3>
+      <p>Professional branding system including logo design, typography, and color strategy for business growth.</p>
+      <button class="btn" onclick="openProject(
+'Brand Identity Design',
+'https://i.postimg.cc/dQ4WFpZc/53d1a444-f5c4-4e9e-b9cd-4c055e619083.jpg'
+)">View Project</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80">
+      <h3>Social Media Management</h3>
+      <p>Content planning, branding visuals, and engagement strategy that improved online visibility.</p>
+      
+      <a href="#" class="btn" onclick="openProject(
+  'Business Website',
+  'images/project1.jpg',
+  'images/project2.jpg',
+  'images/project-video.mp4'
+)">View Project</a>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80">
+      <h3>AI Automation Workflow</h3>
+      <p>Automated lead capture and customer response system designed to save business time.</p>
+      <button class="btn" onclick="openProject(
+'AI Automation Workflow',
+'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80'
+)">View Project</button>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80">
+      <h3>High-Converting Copywriting</h3>
+      <p>Sales-focused website copy crafted to increase engagement and conversion rates.</p>
+    <a class="btn"
+onclick="openProject(
+'https://i.postimg.cc/J03MzsYC/media-1772307026355.png',
+'','
+'images/project2.jpg',
+'images/project3.jpg',
+'videos/demo.mp4'
+)">
+View Project
+</a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2>About Digitus Tech</h2>
+<p class="about">
+Digitus Tech helps small businesses build powerful digital presence through modern websites, intelligent automation, branding, and strategic content creation. We combine creativity with technology to deliver solutions that drive real business growth.
+</p>
+</section>
+
+<!-- PRICING / SERVICE PACKAGES -->
+<section class="section" id="pricing">
+<h2>Our Service Packages</h2>
+<p style="opacity:.8; margin-bottom:30px;">
+Simple, transparent packages to help your business grow digitally.
+</p>
+
+<div class="services">
+
+<!-- BASIC PACKAGE -->
+<div class="card">
+<h3>Starter</h3>
+<p><strong>₦50,000</strong></p>
+<ul style="text-align:left; padding-left:20px;">
+<li>One-page Landing Page</li>
+<li>Basic Branding & Logo</li>
+<li>Social Media Setup</li>
+<li>Email Support</li>
+</ul>
+<button class="btn" onclick="scrollToContact()">Get Started</button>
+</div>
+
+<!-- STANDARD PACKAGE -->
+<div class="card">
+<h3>Business</h3>
+<p><strong>₦120,000</strong></p>
+<ul style="text-align:left; padding-left:20px;">
+<li>Custom Website (Up to 5 pages)</li>
+<li>Graphics & Branding Kit</li>
+<li>Social Media Management (1 month)</li>
+<li>Basic AI Automation Setup</li>
+<li>Email & WhatsApp Support</li>
+</ul>
+<button class="btn" onclick="scrollToContact()">Get Started</button>
+</div>
+
+<!-- PREMIUM PACKAGE -->
+<div class="card">
+<h3>Premium</h3>
+<p><strong>₦250,000</strong></p>
+<ul style="text-align:left; padding-left:20px;">
+<li>Full Website with Blog & Landing Pages</li>
+<li>Complete Branding & Design System</li>
+<li>Social Media Management & Growth Strategy</li>
+<li>Advanced AI Automation & Design Prompt Setup</li>
+<li>Copywriting & Script Writing</li>
+<li>Priority Support (WhatsApp & Email)</li>
+</ul>
+<button class="btn" onclick="scrollToContact()">Get Started</button>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  
+  <h2>What Clients Say</h2>
+  <p style="opacity:.8; margin-bottom:30px;">
+    Businesses trust Digitus Tech to build powerful digital solutions.
+  </p>
+  
+  <div class="services">
+    
+    <div class="card">
+      <p>
+        "Digitus Tech transformed our online presence with a modern website that brought us more customers."
+      </p>
+      <h4>- Small Business Owner</h4>
+    </div>
+    
+    <div class="card">
+      <p>
+        "Professional branding and social media management helped our business look credible and attract clients."
+      </p>
+      <h4>- Startup Founder</h4>
+    </div>
+    
+    <div class="card">
+      <p>
+        "The AI automation setup saved us hours of manual work every week. Highly recommended!"
+      </p>
+      <h4>- Business Manager</h4>
+    </div>
+    
+  </div>
+  
+</section>
+
+<!-- FREE CONSULTATION -->
+<section class="section" id="free-offer">
+
+<h2>Free Digital Presence Audit</h2>
+
+<p style="max-width:700px;margin:auto;opacity:.9;">
+Not sure why your business isn't getting enough customers online?
+Digitus Tech will analyze your website, branding, or social media and give you actionable improvement tips — completely FREE.
+</p>
+
+<br>
+
+<button class="btn"
+onclick="window.open('https://wa.me/2348089614819?text=Hello%20Digitus%20Tech,%20I%20want%20a%20FREE%20Digital%20Presence%20Audit','_blank')">
+Claim Your Free Audit
+</button>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+<h2>Contact Us</h2>
+
+<form action="https://formspree.io/f/xojnylqn" method="post">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+<p>©️ 2026 Digitus Tech — Digital Solutions Agency</p>
+</footer>
+
+<script>
+
+/* ===== SCROLL TO CONTACT (UNCHANGED) ===== */
+function scrollToContact(){
+  document.getElementById("contact").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+
+/* ===== PROJECT POPUP GALLERY SYSTEM ===== */
+
+let currentSlide = 0;
+
+function openProject(title, ...mediaFiles){
+
+  const modal = document.getElementById("projectModal");
+  const gallery = document.getElementById("projectGallery");
+
+  // Set title
+  document.getElementById("projectTitle").innerText = title;
+
+  // Show modal
+  modal.style.display = "flex";
+
+  // Clear old media
+  gallery.innerHTML = "";
+
+  // Create media elements
+  mediaFiles.forEach((file, index) => {
+
+    let element;
+
+    if(file.endsWith(".mp4")){
+      element = document.createElement("video");
+      element.src = file;
+      element.controls = true;
+    } else {
+      element = document.createElement("img");
+      element.src = file;
+    }
+
+    element.classList.add("project-media");
+
+    if(index === 0){
+      element.classList.add("active");
+    }
+
+    gallery.appendChild(element);
+  });
+
+  currentSlide = 0;
+}
+
+
+/* ===== SLIDE CONTROLS ===== */
+
+function showSlide(index){
+  const slides =
+    document.querySelectorAll("#projectGallery .project-media");
+
+  slides.forEach(slide =>
+    slide.classList.remove("active")
+  );
+
+  slides[index].classList.add("active");
+}
+
+function nextSlide(){
+  const slides =
+    document.querySelectorAll("#projectGallery .project-media");
+
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide(){
+  const slides =
+    document.querySelectorAll("#projectGallery .project-media");
+
+  currentSlide =
+    (currentSlide - 1 + slides.length) % slides.length;
+
+  showSlide(currentSlide);
+}
+
+
+/* ===== CLOSE POPUP ===== */
+
+function closeProject(){
+  document.getElementById("projectModal").style.display = "none";
+}
+
+</script>
+
+<!-- WhatsApp Floating Button -->
+
+<a href="https://wa.me/2348089614819?text=Hello%20Digitus%20Tech,%20I%20want%20to%20build%20a%20website%20for%20my%20business" 
+class="whatsapp-float" 
+target="_blank">
+💬
+</a>
+
+<style>
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:24px;
+width:60px;
+height:60px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+</style>
+
+<!-- PROJECT POPUP -->
+<div id="projectModal" class="modal">
+  
+  <div class="modal-content">
+    
+    <span class="close" onclick="closeProject()">&times;</span>
+    
+    <h2 id="projectTitle"></h2>
+    <div id="projectGallery" class="gallery"></div>
+    
+  </div>
+</div>
+
 </body>
 </html>
