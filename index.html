@@ -1,76 +1,68 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitus Tech</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <style>
-        /* Added styling for modals */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
-    <h1>Welcome to Digitus Tech</h1>
-    <div class="gallery">
-        <!-- Fixed project gallery structure -->
-        <div class="project-item">
-            <img src="project1.jpg" alt="Project 1">
-            <p>Description of Project 1</p>
-        </div>
-        <div class="project-item">
-            <img src="project2.jpg" alt="Project 2">
-            <p>Description of Project 2</p>
-        </div>
-    </div>
-
-    <!-- Modal for project details -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-        </div>
-    </div>
-
-    <script>
-        // Script to handle modal opening and closing
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <section id="hero">
+        <h1>Welcome to Digitus Tech</h1>
+        <p>Your partner in digital transformation.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">...</div>
+        <div class="service-card">...</div>
+        <div class="service-card">...</div>
+    </section>
+    <section id="portfolio">
+        <h2>Our Work</h2>
+        <div class="portfolio-item" onclick="openModal();">...</div>
+        <div class="portfolio-item">...</div>
+        <div class="portfolio-item">...</div>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a dedicated team...</p>
+    </section>
+    <section id="pricing">
+        <h2>Pricing Packages</h2>
+        <div class="package">...</div>
+        <div class="package">...</div>
+    </section>
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>...</blockquote>
+    </section>
+    <section id="consultation">
+        <h2>Free Consultation</h2>
+        <button onclick="requestConsultation();">Get Started</button>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 Digitus Tech. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
